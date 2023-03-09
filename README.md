@@ -61,7 +61,9 @@ It will create a new _tsconfig.json_ file, replace the content inside with these
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true
-  }
+  },
+  "include": ["./src/**/*", "server.ts"],
+  "exclude": ["node_modules"]
 }
 ```
 
