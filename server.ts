@@ -1,7 +1,11 @@
-import express from 'express';
+import express, { Express, Request, Response } from 'express';
 
-const app = express();
+const app: Express = express();
 
-app.get('/', (req, res) => res.send({ message: 'Hello World!!!' }));
+app.get('/', (req: Request, res: Response) => {
+  res.send({ message: 'Hello World!!!' });
+});
 
-app.listen(5000, () => console.log('Server is listening on port 5000'));
+app.listen(5000, (): void => {
+  console.log('Server is listening on port 5000');
+});

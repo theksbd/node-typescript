@@ -47,10 +47,22 @@ npm i -D typescript @types/node @types/express ts-node nodemon rimraf
 npx tsc --init
 ```
 
-There is one setting to be changed in _tsconfig.json_ file:
+It will create a new _tsconfig.json_ file, replace the content inside with these configurations below:
 
 ```json
-"outDir": "./dist"
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+  }
+}
 ```
 
 ---
