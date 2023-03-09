@@ -56,13 +56,13 @@ There is one setting to be changed in _tsconfig.json_ file:
 ## 5. Create server.ts file
 
 ```ts
-import express from "express";
+import express from 'express';
 
 const app = express();
 
-app.get("/", (req, res) => res.send({ message: "Hello World" }));
+app.get('/', (req, res) => res.send({ message: 'Hello World' }));
 
-app.listen(5000, () => console.log("Server is listening on port 5000"));
+app.listen(5000, () => console.log('Server is listening on port 5000'));
 ```
 
 ## 6. Update script in _package.json_ file
@@ -80,3 +80,29 @@ app.listen(5000, () => console.log("Server is listening on port 5000"));
 - _build_ command will obliterate whatever inside the **dist** folder first with `rimraf dist` and then use `tsc` to compile/translate the TypeScript code to JavaScript in new **dist** folder.
 - _start_ command will run/start the server with the new compiled/translated JavaScript file.
 - _server_ command is used for development mode, it use **nodemon** package to watch and re-run every time source code file changes, **ts-node** package is used to compile TypeScript into JavaScript before running it in the Node.js environment.
+
+## 7. [OPTIONAL] Add prettier for beautiful code 😎
+
+Create 2 new files _.prettierrc_:
+
+```json
+{
+  "arrowParens": "avoid",
+  "trailingComma": "none",
+  "singleQuote": true,
+  "useTabs": false,
+  "tabWidth": 2,
+  "semi": true
+}
+```
+
+And _.prettierignore_:
+
+```
+# Ignore artifacts:
+build
+coverage
+dist
+
+package-lock.json
+```
