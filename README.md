@@ -25,7 +25,7 @@ It will create a new _package.json_ file
 
 ---
 
-## 2. Install express package
+## 2. Install *express* package
 
 ```
 npm i express
@@ -105,7 +105,7 @@ app.listen(5000, (): void => {
 
 ---
 
-## 7. [OPTIONAL] Add prettier for beautiful code 😎
+## 7. [OPTIONAL] Add *prettier* for beautiful code 😎
 
 Create 2 new files _.prettierrc_:
 
@@ -129,4 +129,10 @@ coverage
 dist
 
 package-lock.json
+```
+
+## 8. [OPTIONAL] Add *eslint* for linting your code 😎
+
+```
+npx eslint --init
 ```
